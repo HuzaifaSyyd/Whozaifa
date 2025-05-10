@@ -240,24 +240,28 @@ const ServicesSection = () => {
 const PortfolioSection = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      category: "Web Development",
-      image: "/placeholder.svg?height=400&width=600",
+      title: "Prompt Organizer",
+      category: "AI",
+      image: "/whozprompt.jpg",
+      link:"",
     },
     {
-      title: "Mobile Banking App",
+      title: "Mobile Banking App (Soon)",
       category: "Mobile Development",
       image: "/placeholder.svg?height=400&width=600",
+      link:"",
     },
     {
-      title: "Product Visualization",
+      title: "Product Visualization (Soon)",
       category: "3D Design",
       image: "/placeholder.svg?height=400&width=600",
+      link:"",
     },
     {
-      title: "Corporate Website",
+      title: "Corporate Website (Soon)",
       category: "Web Design",
       image: "/placeholder.svg?height=400&width=600",
+      link:"",
     },
   ]
 
@@ -301,7 +305,7 @@ const PortfolioSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end items-center text-white p-6">
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <p className="text-sm opacity-80 mb-4">{project.category}</p>
-                    <Button variant="outline" className="text-white border-white hover:bg-white/20 button-elegant">
+                    <Button variant="outline" className="text-black border-white  button-elegant">
                       View Project
                     </Button>
                   </div>
