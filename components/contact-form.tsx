@@ -94,12 +94,11 @@ export default function ContactForm() {
         subject: "",
         message: "",
       })
-    } catch (error) {
-      console.error("Email sending error:", error)
+    } if (res1.status == 200) {
       toast({
-        title: "Sending failed",
-        description: "Something went wrong. Please try again later.",
-        variant: "destructive",
+        title: "submitted successfully ",
+        description: "We will get back to you soon.",
+        variant: "success",
       })
     } finally {
       setIsLoading(false)
