@@ -66,15 +66,15 @@ export default function ContactForm() {
       }
   
       // Send auto-reply to user
-      const res2 = await emailjs.send(
-        serviceId,
-        replyTemplateId,
-        {
-          to_name: formData.name,
-          to_email: formData.email,  // <- this is sent to EmailJS
-        },
-        publicKey
-      )
+      // const res2 = await emailjs.send(
+      //   serviceId,
+      //   replyTemplateId,
+      //   {
+      //     to_name: formData.name,
+      //     to_email: formData.email,  // <- this is sent to EmailJS
+      //   },
+      //   publicKey
+      // )
   
       console.log("Reply email response:", res2)
   
