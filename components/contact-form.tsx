@@ -64,6 +64,10 @@ export default function ContactForm() {
       if (res1.status !== 200) {
         throw new Error("Primary email send failed.")
       }
+      toast({
+        title: "Message sent!",
+        description: "Thanks for contacting us. We'll reply soon.",
+      })
   
       // Send auto-reply to user
       // const res2 = await emailjs.send(
