@@ -132,7 +132,7 @@ const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.34, 1.56, 0.64, 1] }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-10 rounded-2xl"></div>
-              <img src="/placeholder.svg?height=400&width=400" alt="Profile" className="w-full h-full object-cover" />
+              <img src="/developer_male.jpg" alt="Profile" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
