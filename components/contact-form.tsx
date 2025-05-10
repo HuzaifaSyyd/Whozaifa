@@ -61,9 +61,9 @@ export default function ContactForm() {
       console.log("Primary email response:", res1)
   
       // Optional: check for successful status
-      if (res1.status !== 200) {
-        throw new Error("Primary email send failed.")
-      }
+      // if (res1.status !== 200) {
+      //   throw new Error("Primary email send failed.")
+      // }
   
       // Send auto-reply to user
       // const res2 = await emailjs.send(
@@ -76,16 +76,16 @@ export default function ContactForm() {
       //   publicKey
       // )
   
-      console.log("Reply email response:", res2)
+      // console.log("Reply email response:", res2)
   
-      if (res2.status !== 200) {
-        throw new Error("Reply email send failed.")
-      }
+      // if (res2.status !== 200) {
+      //   throw new Error("Reply email send failed.")
+      // }
   
-      toast({
-        title: "Message sent!",
-        description: "Thanks for contacting us. We'll reply soon.",
-      })
+      // toast({
+      //   title: "Message sent!",
+      //   description: "Thanks for contacting us. We'll reply soon.",
+      // })
   
       setFormData({
         name: "",
