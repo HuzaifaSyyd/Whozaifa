@@ -44,67 +44,54 @@ export default function ContactForm() {
     }
   
     try {
-      // Send message to your inbox
-      const res1 = await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        publicKey
-      )
-  
-      console.log("Primary email response:", res1)
-  
-      // Optional: check for successful status
-      if (res1.status !== 200) {
-        throw new Error("Primary email send failed.")
-      }
-  
-      // Send auto-reply to user
-      const res2 = await emailjs.send(
-        serviceId,
-        replyTemplateId,
-        {
-          to_name: formData.name,
-          to_email: formData.email,  // <- this is sent to EmailJS
-        },
-        publicKey
-      )
-  
-      console.log("Reply email response:", res2)
-  
-      if (res2.status !== 200) {
-        throw new Error("Reply email send failed.")
-      }
-  
-      toast({
-        title: "Message sent!",
-        description: "Thanks for contacting us. We'll reply soon.",
-      })
-  
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      })
-    } catch (error) {
-      console.error("Email sending error:", error)
-      toast({
-        title: "Submitted",
-        description: "Thanks for contacting us. We'll reply soon",
-        variant: "success",
-      })
-    } finally {
-      setIsLoading(false)
-    }
+  // Send message to your inbox
+  const res1 = await emailjs.send(
+    serviceId,
+    templateId,
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    publicKey
+  )
+
+  console.log("Primary email response:", res1)
+
+  if (res1.status !== 200) {
+    throw new Error("Primary email send failed.")
   }
+
+  // Success toast
+  toast({
+    title: "Message sent!",
+    description: "Thanks for contacting us. We'll reply soon.",
+    variant: "success",
+  })
+
+  // Clear form
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  })
+
+} catch (error) {
+  console.error("Email sending error:", error)
+  
+  // Error toast
+  toast({
+    title: "Sending failed",
+    description: "Something went wrong. Please try again later.",
+    variant: "destructive",
+  })
+} finally {
+  setIsLoading(false)
+}
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
