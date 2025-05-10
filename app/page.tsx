@@ -187,7 +187,7 @@ const ServicesSection = () => {
       icon: "📱",
     },
     {
-      title: "Digital Marketing",
+      title: "Digital Marketing (Soon)",
       description: "Strategic marketing solutions to help your business grow and reach new audiences.",
       icon: "📊",
     },
