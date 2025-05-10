@@ -30,10 +30,10 @@ export default function ContactForm() {
   
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-    const replyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_REPLY_TEMPLATE_ID
+    // const replyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_REPLY_TEMPLATE_ID
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
   
-    if (!serviceId || !templateId || !replyTemplateId || !publicKey) {
+    if (!serviceId || !templateId || !publicKey) {
       toast({
         title: "Email config error",
         description: "Missing or invalid EmailJS environment variables.",
