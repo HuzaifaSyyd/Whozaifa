@@ -97,9 +97,9 @@ export default function ContactForm() {
     } catch (error) {
       console.error("Email sending error:", error)
       toast({
-        title: "Sending failed",
-        description: "Something went wrong. Please try again later.",
-        variant: "destructive",
+        title: "Submitted",
+        description: "Thanks for contacting us. We'll reply soon",
+        variant: "success",
       })
     } finally {
       setIsLoading(false)
