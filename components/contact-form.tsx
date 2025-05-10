@@ -46,7 +46,13 @@ export default function ContactForm() {
       const res = await emailjs.send(
         serviceId,
         templateId,
-        { ...formData },
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        },
         publicKey
       )
 
