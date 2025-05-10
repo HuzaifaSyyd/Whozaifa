@@ -124,7 +124,7 @@ export default function AIChatPage() {
                 Our team is currently fine-tuning the AI model to ensure it provides accurate and helpful responses.
                 We're also implementing advanced features like image recognition and code assistance.
               </p>
-              <p className="text-sm font-medium">Expected launch: Q3 2023</p>
+              <p className="text-sm font-medium">Expected launch: Q3 2026</p>
             </div>
           </motion.div>
 
