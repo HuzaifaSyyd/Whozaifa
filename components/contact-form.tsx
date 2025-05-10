@@ -94,7 +94,7 @@ export default function ContactForm() {
         subject: "",
         message: "",
       })
-    } if (res1.status === 200) {
+    } catch (error) {
       console.error("Email sending error:", error)
       toast({
         title: "Message sent!",
