@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
 import { useToast } from "@/hooks/use-toast"
 import { Send } from "lucide-react"
 import emailjs from "@emailjs/browser"
@@ -35,7 +35,7 @@ export default function ContactForm() {
     if (!serviceId || !templateId || !publicKey) {
       toast({
         title: "Email config error",
-        description: "Missing or invalid EmailJS environment variables.",
+        description: "Missing EmailJS environment variables",
         variant: "destructive",
       })
       setIsLoading(false)
@@ -43,30 +43,22 @@ export default function ContactForm() {
     }
 
     try {
-      const res1 = await emailjs.send(
+      const res = await emailjs.send(
         serviceId,
         templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-        },
+        { ...formData },
         publicKey
       )
 
-      if (res1.status !== 200) {
-        throw new Error("Primary email send failed.")
-      }
+      if (res.status !== 200) throw new Error("Failed to send")
 
       toast({
         title: "Message sent!",
-        description: "Thanks for contacting us. We'll reply soon.",
+        description: "Thanks for contacting us.",
         variant: "success",
       })
 
-      // ✅ Reset form after successful submission
+      // ✅ Clear form
       setFormData({
         name: "",
         email: "",
@@ -75,18 +67,17 @@ export default function ContactForm() {
         message: "",
       })
 
-    } catch (error) {
-      console.error("Email sending error:", error)
+    } catch (err) {
+      console.error(err)
       toast({
-        title: "Sending failed",
-        description: "Something went wrong. Please try again later.",
+        title: "Error",
+        description: "Something went wrong.",
         variant: "destructive",
       })
     } finally {
       setIsLoading(false)
     }
   }
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
