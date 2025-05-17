@@ -246,9 +246,9 @@ const PortfolioSection = () => {
       link:"",
     },
     {
-      title: "Mobile Banking App (Soon)",
-      category: "Mobile Development",
-      image: "/placeholder.svg?height=400&width=600",
+      title: "Block Piston",
+      category: "Automotive",
+      image: "/blockpiston.jpg",
       link:"",
     },
     {
