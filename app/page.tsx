@@ -249,7 +249,7 @@ const PortfolioSection = () => {
       title: "Block Piston",
       category: "Automotive",
       image: "/blockpiston.jpg",
-      link:"",
+      link:"https://block-hazel.vercel.app/",
     },
     {
       title: "Product Visualization (Soon)",
@@ -306,7 +306,7 @@ const PortfolioSection = () => {
                     <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                     <p className="text-sm opacity-80 mb-4">{project.category}</p>
                     <Button asChild className="rounded">
-                        <Link href="">View Project</Link>
+                        <Link href={project.link} target="_blank">View Project</Link>
                       </Button>
                   </div>
                 </div>
