@@ -255,7 +255,7 @@ const PortfolioSection = () => {
       title: "Luxury E-Com",
       category: "E-commerce",
       image: "/luxury.jpg",
-      link:"",
+      link:"https://whoz-luxury.vercel.app/",
     },
     {
       title: "Corporate Website (Soon)",
