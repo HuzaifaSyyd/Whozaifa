@@ -252,9 +252,9 @@ const PortfolioSection = () => {
       link:"https://block-hazel.vercel.app/",
     },
     {
-      title: "Product Visualization (Soon)",
-      category: "3D Design",
-      image: "/placeholder.svg?height=400&width=600",
+      title: "Luxury E-Com",
+      category: "E-commerce",
+      image: "/luxury.jpg",
       link:"",
     },
     {
