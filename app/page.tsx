@@ -258,10 +258,10 @@ const PortfolioSection = () => {
       link:"https://whoz-luxury.vercel.app/",
     },
     {
-      title: "Corporate Website (Soon)",
-      category: "Web Design",
-      image: "/placeholder.svg?height=400&width=600",
-      link:"",
+      title: "Sweet Delight",
+      category: "Cake shop",
+      image: "/sweet.jpg",
+      link:"https://sweet-delight-delta.vercel.app/",
     },
   ]
 
